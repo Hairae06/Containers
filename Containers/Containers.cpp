@@ -7,6 +7,7 @@
 #include <print>
 #include <vector>
 #include <list>
+#include <map>
 using namespace std;
 
 int main()
@@ -26,9 +27,34 @@ int main()
 		cout << daysOfTheWeek[i] + "\n";
 	}
 
-	vector<int> num[5];
+	vector<int> intVector = { 1, 2, 3, 4, 5 };
+	intVector.push_back(6);
+	intVector.push_back(7);
+	intVector.pop_back();
 
-	list<string> fruit[3];
+	for (int i = 0; i < 6; i++)
+	{
+		cout << intVector[i] + "\n";
+	}
+
+	list<string> fruit = {"Apple", "Bannana", "Peach"};
+	fruit.push_back("Green Bannana");
+	fruit.push_front("Green Apple");
+	fruit.remove("Green Bannana");
+
+	for (int i = 0; i < 4; i++)
+	{
+		cout << fruit[i] + "\n";
+	}
+
+	map<string, int> stringMapInt;
+	stringMapInt[0] = ("apples", 10);
+
+	for (int i = 0; i < 4; i++)
+	{
+		cout << stringMapInt[i] + "\n";
+	}
+
 
 
 }
